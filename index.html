@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ToDoアプリ</title>
+        <!--CSSの読み込み。style.cssという場所にあるファイルをデザイン指示書として、関連づける-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>ToDoリスト</h1>
+        <!--（input-area）というIDの大きな箱。グループの親。-->
+        <div id="input-area">
+            <!--ユーザーがタスクの文字を打ち込む欄。一行用（text）、IDが（todo-input）、欄が空白の時に、（placehplder）の文字が表示される-->
+            <input type="text" id="todo-input" placeholder="タスクを入力">
+            <!--タスクを確定させる追加ボタン。IDが（add-btn）-->
+            <button id="add-btn">追加</button>
+        </div>
+        <!--箇条書きリストの空の箱。-->
+        <ul id="todo-list"></ul>
+        <!--app.jsを読み込む。HTMLの部品（リストやボタン）を作ってからJSを読み込む-->
+        <script src="app.js"></script>
+    </body>
+</html>
