@@ -16,11 +16,21 @@ addBtn.addEventListener("click",function(){
     // 上で作った空のリストのテキスト欄に、ユーザーが入力欄へと入力したテキストを入れる。
     li.textContent=text;
     // 削除ボタンの追加
+    // ボタンの部品を作ってremoveBtnの箱に入れる
     const removeBtn=document.createElement("button")
+    // リストのプレートの末尾に削除ボタンを表示
     li.appendChild(removeBtn);
+    // 削除ボタンに（削除）の文字を表示
     removeBtn.textContent="削除";
+    // 削除ボタンがクリックされたら関数を実行
     removeBtn.addEventListener("click",function(){
+        // リストを削除
         li.remove();
+    })
+    // タスクがクリックされたら、完了の印の線を引く関数を実行させる
+    li.addEventListener("click",function(){
+        // タスクのクラスに(done)を追加したり外したりする。doneクラスが付くと、CSSが自動で線を引く。
+        li.classList.toggle("done")
     })
     // リストの一番後ろに、上のテキストを入力したリストをはめ込む。リストの箱（親、ul）の末尾に新しいリスト（子、li）を追加。
     list.appendChild(li);

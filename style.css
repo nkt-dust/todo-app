@@ -12,3 +12,5 @@ li{
     padding: 8px 0;
     border-bottom: 1px solid #eee;
 }
+/* doneというラベルがついたテキストに線を引く */
+.done{ text-decoration: line-through; color:#aaa; }
